@@ -1,6 +1,7 @@
 import pygame
 import requests
 import sys
+import os
 
 
 def load_map():
@@ -30,6 +31,7 @@ def main():
         map_file = load_map()
         screen.blit(pygame.image.load(map_file), (0, 0))
         pygame.display.flip()
+    os.remove(map_file)
 
 
 main()
